@@ -7,9 +7,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin", builder =>
     {
-        builder.WithOrigins("https://example.com") // Permitir apenas requisições deste domínio
-               .AllowAnyMethod() // Permitir qualquer método (GET, POST, etc.)
-               .AllowAnyHeader(); // Permitir qualquer cabeçalho
+        builder.WithOrigins("") 
+               .AllowAnyMethod() 
+               .AllowAnyHeader(); 
     });
 });
 
@@ -28,8 +28,8 @@ builder.Services.AddCors(
                     s => s.AddPolicy("DefaultPolicy", builder =>
                     {
                         builder.AllowAnyOrigin() //qualquer dominio
-                               .AllowAnyMethod() //qualquer método (POST, PUT, DELETE, GET...)
-                               .AllowAnyHeader(); //qualquer parametro de cabeçalho
+                               .AllowAnyMethod() //qualquer mÃ©todo (POST, PUT, DELETE, GET...)
+                               .AllowAnyHeader(); //qualquer parametro de cabeÃ§alho
                     }
                         )
                 );
