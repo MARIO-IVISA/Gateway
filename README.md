@@ -1,20 +1,67 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# API Gateway com Ocelot
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Tags
+`net6.0` `api-gateway` `ocelot` `cursos` `usuarios` `matriculas`
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Este é um API Gateway desenvolvido em .NET 6.0 utilizando o Ocelot. Ele roteia requisições para vários serviços back-end e expõe uma única interface para os clientes.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Configuração das Rotas
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+### Rota: Cursos
+- **Descrição**: Rota para acessar os serviços relacionados a cursos.
+- **Endpoint**: `/gateway/cursos`
+- **Métodos HTTP**: GET, POST
+- **Servidor Back-end**: `http://localhost:37782`
+
+### Rota: Curso por ID
+- **Descrição**: Rota para acessar um curso específico por ID.
+- **Endpoint**: `/gateway/cursos/{id}`
+- **Método HTTP**: GET
+- **Servidor Back-end**: `http://localhost:37782`
+
+### Rota: Login
+- **Descrição**: Rota para autenticação de usuários.
+- **Endpoint**: `/gateway/login`
+- **Método HTTP**: POST
+- **Servidor Back-end**: `http://localhost:12614`
+
+### Rota: Cadastro de Usuário
+- **Descrição**: Rota para cadastrar novos usuários.
+- **Endpoint**: `/gateway/cadastro`
+- **Método HTTP**: POST
+- **Servidor Back-end**: `http://localhost:12614`
+
+### Rota: Listagem de Usuários
+- **Descrição**: Rota para listar todos os usuários cadastrados.
+- **Endpoint**: `/gateway/usuarios`
+- **Método HTTP**: GET
+- **Servidor Back-end**: `http://localhost:12614`
+
+### Rota: Verificar Matrícula
+- **Descrição**: Rota para verificar a matrícula de um aluno em um curso.
+- **Endpoint**: `/gateway/Matriculas/VerificarMatricula`
+- **Método HTTP**: POST
+- **Servidor Back-end**: `http://localhost:5293`
+
+### Rota: Buscar Matrícula por Curso
+- **Descrição**: Rota para buscar as matrículas de um curso específico.
+- **Endpoint**: `/gateway/Matriculas/BuscarMatriculaPorCurso/{id}`
+- **Método HTTP**: GET
+- **Servidor Back-end**: `http://localhost:5293`
+
+### Rota: Atualizar Matrícula
+- **Descrição**: Rota para atualizar as informações de uma matrícula.
+- **Endpoint**: `/gateway/Matriculas`
+- **Método HTTP**: PUT
+- **Servidor Back-end**: `http://localhost:5293`
+
+### Rota: Pré-Matrícula
+- **Descrição**: Rota para pré-matrícula em um curso.
+- **Endpoint**: `/gateway/Matriculas`
+- **Método HTTP**: POST
+- **Servidor Back-end**: `http://localhost:7134`
+
+## Tecnologias Utilizadas
+
+- .NET 6.0
+- Ocelot
