@@ -1,0 +1,116 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Cursos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 37782
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/cursos",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Cursos/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 37782
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Cursos/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12614
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/cadastro",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12614
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/cadastro",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Usuarios",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 12614
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/usuarios",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Matriculas/VerificarMatricula",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7114
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Matriculas/VerificarMatricula",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Matriculas/BuscarMatriculaPorCurso/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7114
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Matriculas/BuscarMatriculaPorCurso/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Matriculas",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7114
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Matriculas",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/PreMatricula",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7134
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Matriculas",
+      "UpstreamHttpMethod": [ "Post" ]
+    }
+  ],
+
+      "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:44349"
+      }
+    }
