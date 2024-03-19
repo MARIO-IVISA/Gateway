@@ -55,11 +55,11 @@ Este é um API Gateway desenvolvido em .NET 6.0 utilizando o Ocelot. Ele roteia 
 - **Método HTTP**: PUT
 - **Servidor Back-end**: `http://localhost:5293`
 
-### Rota: Pré-Matrícula
-- **Descrição**: Rota para pré-matrícula em um curso.
+### Rota: Matrícula
+- **Descrição**: Rota para matrícula em um curso.
 - **Endpoint**: `/gateway/Matriculas`
 - **Método HTTP**: POST
-- **Servidor Back-end**: `http://localhost:7134`
+- **Servidor Back-end**: `http://localhost:5293`
 
 ## Tecnologias Utilizadas
 
