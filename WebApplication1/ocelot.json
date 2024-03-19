@@ -5,20 +5,32 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 37782
+          "Host": "cursos",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/gateway/cursos",
-      "UpstreamHttpMethod": [ "Get", "Post" ]
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Cursos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "cursos",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/cadastrarCursos",
+      "UpstreamHttpMethod": [ "Post" ]
     },
     {
       "DownstreamPathTemplate": "/api/Cursos/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 37782
+          "Host": "cursos",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/gateway/Cursos/{id}",
@@ -29,8 +41,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 12614
+          "Host": "usuariospod",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/gateway/login",
@@ -41,8 +53,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 12614
+          "Host": "usuariospod",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/gateway/cadastro",
@@ -53,8 +65,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 12614
+          "Host": "usuariospod",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/gateway/usuarios",
@@ -62,11 +74,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/Matriculas/VerificarMatricula",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7114
+          "Host": "secretariapod",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/gateway/Matriculas/VerificarMatricula",
@@ -74,40 +86,53 @@
     },
     {
       "DownstreamPathTemplate": "/api/Matriculas/BuscarMatriculaPorCurso/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7114
+          "Host": "secretariapod",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/gateway/Matriculas/BuscarMatriculaPorCurso/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/api/Matriculas",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/Matriculas/BuscarMatriculaPorAluno/{id}",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7114
+          "Host": "secretariapod",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Matriculas/BuscarMatriculaPorAluno/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Matriculas",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "secretariapod",
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/gateway/Matriculas",
       "UpstreamHttpMethod": [ "Put" ]
     },
     {
-      "DownstreamPathTemplate": "/api/PreMatricula",
+      "DownstreamPathTemplate": "/api/Matriculas",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7134
+          "Host": "secretariapod",
+          "Port": 8080
         }
       ],
-      "UpstreamPathTemplate": "/gateway/Matriculas",
+      "UpstreamPathTemplate": "/gateway/MatricularAluno",
       "UpstreamHttpMethod": [ "Post" ]
     }
+
   ],
 
       "GlobalConfiguration": {
